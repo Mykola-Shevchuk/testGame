@@ -107,12 +107,14 @@ nav.main-navigation ul li a.logo {
 
 .iframe-block {
 	width: 1115px;
+
 	float: left;
-	padding: 6px 6px 10px 6px;
 }
 
-.iframe-block img {
+.iframe-block img, iframe {
 	width: 100%;
+	border: 0;
+	overflow: hidden;
 }
 
 .game-navigation {
@@ -164,7 +166,7 @@ nav.main-navigation ul li a.logo {
  	display: none;
 }
 
-i.close-full-information {
+.close-full-information {
 	background: url(../img/icons.png) no-repeat;
     width: 20px;
     height: 20px;
@@ -218,6 +220,11 @@ ul.inner-navigation li span {
 }
 
 .favorite-star:hover {
+	background: url(../img/icons.png) no-repeat;
+	background-position: -93px 1px;
+}
+
+.show-favorite-star {
 	background: url(../img/icons.png) no-repeat;
 	background-position: -93px 1px;
 }
@@ -306,9 +313,9 @@ ul.inner-navigation li span {
 /* FOOTER */
 
 footer {
-	width: 1415px;
-	margin: 0 auto;
-	margin-top: 15px;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
 }
 
 footer p {
@@ -431,8 +438,7 @@ footer {
 	and (max-width: 1500px)  {
 
 	nav.main-navigation,
-	.drop-down-img-block,
-	footer {
+	.drop-down-img-block {
 		width: 1180px;
 		
 	}
@@ -443,6 +449,7 @@ footer {
 
 	.iframe-block {
 		width: 900px;
+		height: 510px;
 	}
 
 	.game-information-section {
@@ -468,8 +475,7 @@ footer {
 	and (max-width: 1200px)  {
 
 	nav.main-navigation,
-	.drop-down-img-block,
-	footer {
+	.drop-down-img-block {
 		width: 960px;
 	}
 
@@ -479,6 +485,7 @@ footer {
 
 	.iframe-block {
 		width: 700px;
+		height: 397px;
 	}
 	
 	.game-information-section {
@@ -506,8 +513,7 @@ footer {
 	and (max-width: 980px)  {
 
 	nav.main-navigation,
-	.drop-down-img-block,
-	footer {
+	.drop-down-img-block {
 		width: 800px;
 	}
 
@@ -517,6 +523,7 @@ footer {
 
 	 .iframe-block {
 		width: 100%;
+		height: 454px;
 	}
 	
 	.game-information-section {
@@ -544,13 +551,16 @@ footer {
 	and (max-width: 870px)  {
 
 	nav.main-navigation,
-	.drop-down-img-block,
-	footer {
+	.drop-down-img-block {
 		width: 700px;
 	}
 
 	.game-section {
 		width: 700px;
+	}
+
+	.iframe-block {
+		height: 400px;
 	}
 
 }
@@ -559,13 +569,16 @@ footer {
 	and (max-width: 770px)  {
 
 	nav.main-navigation,
-	.drop-down-img-block,
-	footer {
+	.drop-down-img-block {
 		width: 600px;
 	}
 
 	.game-section {
 		width: 600px;
+	}
+
+	.iframe-block {
+		height: 340px;
 	}
 
 }
