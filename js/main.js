@@ -182,24 +182,4 @@ $(document).ready(function($) {
             e.preventDefault();
         }
     });
-
-	/*Отслеживаем изминения размеров экрана*/
-
-	/*var resize = function(e){
-		console.log($gameWindow.innerWidth());
-		console.log($gameWindow.width());
-  		$gameWindow.attr('style', '');
-	};
-
-	(function(){
-		var time;
-		window.onresize = function(e){
-			if (time)
-				clearTimeout(time);
-				time = setTimeout(function(){
-				resize(e);
-			}, 100);
-		}
-	})();*/
-
 });
