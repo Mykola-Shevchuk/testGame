@@ -9,7 +9,8 @@ $(document).ready(function($) {
 		$gameInfoIcon = $('.more-information'),
 		$gameInfoBlock = $('.game-information-section'),
 		$closerFullInfo = $('.close-full-information'),
-		$hiderFullInfo = $('.hide');
+		$hiderFullInfo = $('.hide'),
+		$bodyWidth = $('body').width();
 
 	//Add active class
 	$($itemMenu).on('click', function() {
@@ -28,17 +29,30 @@ $(document).ready(function($) {
 	});
 
 
-/*//CLOSERS
+//CLOSERS
 	$gameInfoIcon.on('click', function() {
-		$gameNavigationBlock.fadeOut('fast');
+
+		if ($bodyWidth < 980) {
+			$gameNavigationBlock.fadeOut(500);
+
+			$gameWindow.css({
+				width: $gameInfoBlock.innerWidth()
+			});
+			
+			$gameInfoBlock.fadeIn(500);
+			
+			return false;
+		};
+
+		$gameNavigationBlock.fadeOut(500);
 
 		$gameWindow.css({
 			width: $gameWindow.innerWidth() + $gameInfoBlock.innerWidth()
 		});
 
-		setTimeout(function() {
-			$gameInfoBlock.css('display', 'block');
-		}, 500);
+		
+			$gameInfoBlock.delay(500).fadeIn(500);
+		
 
 	});
 
@@ -47,18 +61,31 @@ $(document).ready(function($) {
 			width: '900px',
 		}); 
 
-		$gameNavigationBlock.fadeIn('fast');
+		$gameNavigationBlock.fadeIn(500);
 
 	});
 
 	$hiderFullInfo.on('click', function() {
+
+		if ($bodyWidth < 980) {
+			$gameInfoBlock.fadeOut(500);
+
+			$gameWindow.css({
+				width: $gameWindow.innerWidth()
+			});
+
+			$gameNavigationBlock.fadeIn(500);
+
+			return false;
+		};
+
 		$gameInfoBlock.css('display', 'none');
 		$gameWindow.css({
-			width: '900px'
+			width: $gameWindow.innerWidth() - $gameInfoBlock.innerWidth()
 		});
 
 		$gameNavigationBlock.fadeIn('fast');
 
 
-	});*/
+	});
 });

@@ -91,7 +91,7 @@ nav.main-navigation ul li a.logo {
 /* CONTENT PART */
 
 .game-section {
-	width: 1415px;
+	width: 1115px;
 	margin: 0 auto;
 	margin-top: 20px;
 	background: url('../img/tracery-bg.jpg');
@@ -117,9 +117,8 @@ nav.main-navigation ul li a.logo {
 
 .game-navigation {
 	position: absolute;
-	right: -21px;
+	right: -19px;
 	top: 0;
-	display: none;
 }
 
 .close {
@@ -134,7 +133,7 @@ nav.main-navigation ul li a.logo {
 	background: url(../img/icons.png) no-repeat;
     width: 20px;
     height: 20px;
-    background-position: 6px 2px;
+    background-position: 8px 2px;
     display: block;
 }
 
@@ -150,9 +149,9 @@ nav.main-navigation ul li a.logo {
 
 .more-information span {
 	background: url(../img/icons.png) no-repeat;
-    width: 14px;
+    width: 15px;
     height: 20px;
-    background-position: -23px 3px;
+    background-position: -22px 3px;
     display: block;
 }
 
@@ -162,6 +161,7 @@ nav.main-navigation ul li a.logo {
     padding: 0px 20px;
     font: normal 13px Arial;
  	position: relative;
+ 	display: none;
 }
 
 i.close-full-information {
@@ -432,10 +432,13 @@ footer {
 
 	nav.main-navigation,
 	.drop-down-img-block,
-	.game-section,
 	footer {
 		width: 1180px;
 		
+	}
+
+	.game-section {
+		width: 900px;
 	}
 
 	.iframe-block {
@@ -466,12 +469,15 @@ footer {
 
 	nav.main-navigation,
 	.drop-down-img-block,
-	.game-section,
 	footer {
 		width: 960px;
 	}
 
-	 .iframe-block {
+	.game-section {
+		width: 700px;
+	}
+
+	.iframe-block {
 		width: 700px;
 	}
 	
